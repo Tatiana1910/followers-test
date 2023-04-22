@@ -1,17 +1,25 @@
-import { AppBar } from 'components/AppBar/AppBar';
-import { Loader } from 'components/Loader/Loader';
-import { ContainerToast } from 'components/ToastContainer/ToastContainer';
 import { Suspense } from 'react';
+import { StyledLink } from './Layout.styled';
 import { Outlet } from 'react-router-dom';
 
 export const Layout = () => {
   return (
-    <div>
-      <AppBar />
-      <Suspense fallback={<Loader />}>
-        <Outlet />
-      </Suspense>
-      <ContainerToast />
-    </div>
+    <>
+      <header>
+        <ul>
+          <li>
+            <StyledLink to="/">Home</StyledLink>
+          </li>
+          <li>
+            <StyledLink to="/tweets">Tweets</StyledLink>
+          </li>
+        </ul>
+      </header>
+      <main>
+        <Suspense fallback={<div>Loading...</div>}>
+          <Outlet />
+        </Suspense>
+      </main>
+    </>
   );
 };
