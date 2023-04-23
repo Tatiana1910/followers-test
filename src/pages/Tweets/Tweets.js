@@ -1,7 +1,7 @@
 import { useLocation } from 'react-router-dom';
 import { BackLink } from './Tweets.styled';
 import { MdArrowBackIos } from 'react-icons/md';
-import { TweetCard } from 'components/TweetCard/TweetCard';
+import { TweetCardList } from 'components/TweetCardList/TweetCardList';
 
 const Tweets = () => {
   const location = useLocation();
@@ -12,7 +12,7 @@ const Tweets = () => {
         Back
       </BackLink>
       <section>
-        <TweetCard />
+        <TweetCardList />
       </section>
     </>
   );

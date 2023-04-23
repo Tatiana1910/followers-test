@@ -20,10 +20,10 @@ export const StyledLink = styled(NavLink)`
   display: inline-block;
   padding-top: 32px;
   padding-bottom: 32px;
-  font-weight: 500;
   font-size: 25px;
   transform: scale(1);
   transition: transform 250ms linear;
+  font-family: 'MontserratSemiBold';
 
   &:hover,
   &:focus {
@@ -50,7 +50,7 @@ export const TextFooter = styled.p`
   text-align: center;
   color: black;
   font-size: 15px;
-  font-weight: 500;
   margin: 0;
   padding: 10px;
+  font-family: 'MontserratSemiBold';
 `;

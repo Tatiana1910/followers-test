@@ -83,6 +83,7 @@ export const CardText = styled.p`
   font-size: 20px;
   line-height: 24px;
   text-transform: uppercase;
+  font-family: 'MontserratMedium';
 
   :nth-child(2) {
     margin-top: 26px;
