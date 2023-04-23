@@ -6,9 +6,11 @@ import {
   Footer,
   TextFooter,
 } from './Layout.styled';
-import { Outlet } from 'react-router-dom';
+import { Outlet, useLocation } from 'react-router-dom';
+import { Loader } from 'components/Loader/Loader';
 
 export const Layout = () => {
+  const location = useLocation();
   return (
     <>
       <Header>
@@ -17,13 +19,15 @@ export const Layout = () => {
             <StyledLink to="/">Home</StyledLink>
           </li>
           <li>
-            <StyledLink to="/tweets">Tweets</StyledLink>
+            <StyledLink to="/tweets" state={{ from: location }}>
+              Tweets
+            </StyledLink>
           </li>
         </StyledList>
       </Header>
       <main>
         <section>
-          <Suspense fallback={<div>Loading...</div>}>
+          <Suspense fallback={<Loader />}>
             <Outlet />
           </Suspense>
         </section>

@@ -1,19 +1,19 @@
-import { Link, Outlet } from 'react-router-dom';
-import { Suspense } from 'react';
+import { useLocation } from 'react-router-dom';
+import { BackLink } from './Tweets.styled';
+import { MdArrowBackIos } from 'react-icons/md';
+import { TweetCard } from 'components/TweetCard/TweetCard';
 
 const Tweets = () => {
+  const location = useLocation();
   return (
     <>
-      <h1>Tweets</h1>
-      <Link to="/">Back</Link>
-      <ul>
-        <li>
-          <Link to="tweets">Tweet</Link>
-        </li>
-      </ul>
-      <Suspense fallback={<div>Loading...</div>}>
-        <Outlet />
-      </Suspense>
+      <BackLink to={location.state?.from ?? '/'}>
+        <MdArrowBackIos />
+        Back
+      </BackLink>
+      <section>
+        <TweetCard />
+      </section>
     </>
   );
 };
