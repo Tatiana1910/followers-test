@@ -56,8 +56,8 @@ section {
   padding-right: 15px;
   margin-left: auto;
   margin-right: auto;
-  padding-top: 50px;
-  padding-bottom: 50px;
+  padding-top: 45px;
+  padding-bottom: 45px;
 }
 
 img {
