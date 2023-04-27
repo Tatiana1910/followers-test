@@ -1,6 +1,4 @@
-#follow-me-test
-
-# FollowMe App
+FollowMe App
 
 This is social web App intended allows you to follow other users' tweets.
 
