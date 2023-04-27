@@ -3,7 +3,7 @@ import { BackLink, LoadMoreBtn } from './Tweets.styled';
 import { MdArrowBackIos } from 'react-icons/md';
 import { TweetCardList } from 'components/TweetCardList/TweetCardList';
 import { useEffect, useState } from 'react';
-import { getAllUsers } from 'helpers/fetchApi';
+import { getAllUsers } from 'services/fetchApi';
 import { Loader } from 'components/Loader/Loader';
 
 const Tweets = () => {

@@ -6,7 +6,7 @@ import {
   ImageThumb,
   CardText,
 } from './TweetCard.styled';
-import { updateFollowers } from 'helpers/fetchApi';
+import { updateFollowers } from 'services/fetchApi';
 import { Button } from 'components/Button/Button';
 
 export const TweetCard = ({ userObj, setFollowedUsers, followed }) => {

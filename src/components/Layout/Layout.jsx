@@ -14,16 +14,18 @@ export const Layout = () => {
   return (
     <>
       <Header>
-        <StyledList>
-          <li>
-            <StyledLink to="/">Home</StyledLink>
-          </li>
-          <li>
-            <StyledLink to="/tweets" state={{ from: location }}>
-              Tweets
-            </StyledLink>
-          </li>
-        </StyledList>
+        <nav>
+          <StyledList>
+            <li>
+              <StyledLink to="/">Home</StyledLink>
+            </li>
+            <li>
+              <StyledLink to="/tweets" state={{ from: location }}>
+                Tweets
+              </StyledLink>
+            </li>
+          </StyledList>
+        </nav>
       </Header>
       <main>
         <section>

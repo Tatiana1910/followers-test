@@ -1,12 +1,12 @@
 import { Image, StyledDiv } from './Home.styled';
-import phonebook from '../../images/phonebook.png';
+import follow from '../../images/follow.png';
 import { Link } from 'react-router-dom';
 
 const Home = () => {
   return (
     <StyledDiv>
       <Link to="/tweets">
-        <Image src={phonebook} alt="phonebook" />
+        <Image src={follow} alt="follow" />
       </Link>
     </StyledDiv>
   );
